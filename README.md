@@ -59,4 +59,6 @@ People complain that the Web does not work and send the software version. I can'
 ### 4g cam ANYKA AK3918EV300 BOOT LOG
 ![](IMG_20241213_095927.jpg)
 
-[Boot Log](https://raw.githubusercontent.com/sw3nlab/V380-Web/refs/heads/main/4g_cam_boot_log.txt) 
+[FULL Boot Log](https://raw.githubusercontent.com/sw3nlab/V380-Web/refs/heads/main/4g_cam_boot_log.txt) 
+
+[SPI Dump](https://github.com/sw3nlab/V380-Web/blob/main/4g.bin)
