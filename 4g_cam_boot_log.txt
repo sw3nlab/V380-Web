@@ -1,0 +1,858 @@
+NAak_fixed_clk_probe: parameters ok, nf=100 nr=1 nb=16 freq=400000000
+pll2 frequency out: 400MHz
+gclk frequency out: 200MHz
+
+
+U-Boot 2019.10.0-V4.0.15-g82e30b4f (Feb 20 2024 - 11:31:03 +0800)
+
+CPU: 888MHz
+Model: EVB_CBD_AK3918EV300L_V1.0.0 board
+DRAM:  64 MiB
+ak_fixed_clk_probe: parameters ok, nf=100 nr=1 nb=16 freq=400000000
+ak_fixed_clk_probe pll2 has inited!
+pll2 frequency out: 400MHz
+gclk frequency out: 200MHz
+Flash: SF: Detected XM25QH64C with page size 256 Bytes, erase size 4 KiB, total 8 MiB
+8 MiB
+MMC:   ak3918ev300l_gpio_probe
+motor reg set ver:0.1
+@get_card_status, card UNPLUGED
+mmc1@20108000: 0
+Loading Environment from SPI Flash... OK
+In:    uart0@20130000
+Out:   uart0@20130000
+Err:   uart0@20130000
+Net:   No ethernet found.
+disable abortboot...
+SF: Detected XM25QH64C with page size 256 Bytes, erase size 4 KiB, total 8 MiB
+device 0 offset 0x49000, size 0x190000
+SF: 1638400 bytes @ 0x49000 Read: OK
+SF: Detected XM25QH64C with page size 256 Bytes, erase size 4 KiB, total 8 MiB
+device 0 offset 0x39000, size 0xd37f
+SF: 54143 bytes @ 0x39000 Read: OK
+## Booting kernel from Legacy Image at 80008000 ...
+   Image Name:   Linux-4.4.282
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    1597072 Bytes = 1.5 MiB
+   Load Address: 80008000
+   Entry Point:  80008040
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 81300000
+   Booting using the fdt blob at 0x81300000
+   Loading Kernel Image
+   Using Device Tree in place at 81300000, end 8131037e
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+Booting Linux on physical CPU 0x0
+Linux version 4.4.282 (pc167@pc167-PC) (gcc version 5.5.0 (Buildroot 2018.02.7_V1.0.04-g78fae67) ) #10 Sun Apr 7 15:51:45 CST 2024
+CPU: ARM926EJ-S [41069265] revision 5 (ARMv5TEJ), cr=0005317f
+CPU: VIVT data cache, VIVT instruction cache
+Machine model: EVB_CBDM_AK3918EV300L_V1.0.0 board
+Memory policy: Data cache writeback
+ANYKA CPU AK3918EV300L (ID 0x535434)
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 16256
+Kernel command line: console=ttySAK0,115200n8 root=/dev/mtdblock5 rootfstype=squashfs init=/sbin/init mtdparts=spi0.0:220K@0x0(UBOOT),4K@0x37000(ENV),4K@0x38000(ENVBK),64K@0x39000(DTB),1600K@0x49000(KERNEL),1300K@0x1D9000(ROOTFS),1000K@0x31E000(EXT),800K@0x418000(JFFS2),1960K@0x4E0000(USR),1240K@0x6CA000(MVS),8192K@0x0(ALL) mem=64M memsize=64M
+PID hash table entries: 256 (order: -2, 1024 bytes)
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 33432K/65536K available (3162K kernel code, 119K rwdata, 1004K rodata, 136K init, 186K bss, 32104K reserved, 0K cma-reserved)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xc4800000 - 0xff800000   ( 944 MB)
+    lowmem  : 0xc0000000 - 0xc4000000   (  64 MB)
+    modules : 0xbf000000 - 0xc0000000   (  16 MB)
+      .text : 0xc0008000 - 0xc0419c14   (4168 kB)
+      .init : 0xc041a000 - 0xc043c000   ( 136 kB)
+      .data : 0xc043c000 - 0xc0459da0   ( 120 kB)
+       .bss : 0xc0459da0 - 0xc0488850   ( 187 kB)
+SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+NR_IRQS:124
+ak3918av100_fixed_clk: CPU(JCLK): 888(Mhz) 
+ak3918av100_fixed_clk: DDR2: 444(Mhz) 
+ak3918av100_fixed_clk: PLL2_GCLK: 200(Mhz) 
+threshold: 2.65V ~ 2.86V
+ak-timer: ak_timer_init
+clocksource: ak_cs_timer: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 159271703898 ns
+sched_clock: 32 bits at 12MHz, resolution 83ns, wraps every 178956970966ns
+Calibrating delay loop... 442.36 BogoMIPS (lpj=2211840)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0x80008400 - 0x8000843c
+devtmpfs: initialized
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 256 (order: -1, 3072 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 16 KiB pool for atomic coherent allocations
+On-chip L2 memory initialized
+ak-pinctrl 20170000.gpio: ak_pinctrl_probe 2322
+ak-pinctrl 20170000.gpio: gpio_base 0xf0170000 gpio_base_pa 0x20170000
+ak_pinctrl_probe irq: 16
+media: Linux media interface: v0.10
+Linux video capture interface: v2.00
+clocksource: Switched to clocksource ak_cs_timer
+NET: Registered protocol family 2
+IP idents hash table entries: 2048 (order: 2, 16384 bytes)
+TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 1024 bind 1024)
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+jffs2: version 2.2. © 2001-2006 Red Hat, Inc.
+io scheduler noop registered (default)
+soc soc0: Anyka AK3918EV300L None detected
+AKxx uart driver init, (c) 2013 ANYKA
+20130000.uart0: ttySAK0 at MMIO 0x20130000 (irq = 11, base_baud = 12500000) is a AK
+console [ttySAK0] enabled
+Start to init Anyka SPI Flash...
+init Anyka SPI Nand Flash driver
+SPI0 bus frequency is 66666666 HZ
+enter ak_spi_probe..., hw=c3901a10, hw->clk=c39e3740
+spi0 hz is 66000000
+ak spiflash probe enter.
+akspi flash ID: 0x00204017
+spiflash hz is 66000000
+ak-spiflash spi0.0: xm25qh64c (16384 Kbytes)
+11 cmdlinepart partitions found on MTD device spi0.0
+Creating 11 MTD partitions on "spi0.0":
+0x000000000000-0x000000037000 : "UBOOT"
+0x000000037000-0x000000038000 : "ENV"
+0x000000038000-0x000000039000 : "ENVBK"
+0x000000039000-0x000000049000 : "DTB"
+0x000000049000-0x0000001d9000 : "KERNEL"
+0x0000001d9000-0x00000031e000 : "ROOTFS"
+0x00000031e000-0x000000418000 : "EXT"
+0x000000418000-0x0000004e0000 : "JFFS2"
+0x0000004e0000-0x0000006ca000 : "USR"
+0x0000006ca000-0x000000800000 : "MVS"
+0x000000000000-0x000000800000 : "ALL"
+Init AK SPI Flash finish.
+akspi master SPI0 initialize success, use for PIO mode.
+i2c /dev entries driver
+ak_wdt_init: watchdog register...
+NET: Registered protocol family 17
+sctp: Hash tables configured (established 512 bind 1024)
+hctosys: unable to open rtc device (rtc0)
+
+VFS: Mounted root (squashfs filesystem) readonly on device 31:5.
+devtmpfs: mounted
+Freeing unused kernel memory: 136K
+mount all file system...
+**************************
+    Love Linux ! ! ! 
+**************************
+starting mdev...
+                     __                     
+            _   ____ \/ ____  __            
+     /\    | \ | |\ \  / /| |/ /    /\      
+    /  \   |  \| | \ \/ / | ' /    /  \     
+   / /\ \  | . ' |  \  /  |  <    / /\ \    
+  / ____ \ | |\  |  |  |  | . \  / ____ \   
+ /_/    \_\|_| \_|  |__|  |_|\_\/_/    \_\  
+                                            
+ifconfig: SIOCGIFFLAGS: No such device
+
+
+GZhongshi login: ak_mac Ethernet Driver
+ak_mac_probe, line:6552, mac_id:0 
+insmod mac device ok
+ak_motor_probe
+ak_motor_probe
+mipi1_error_bits_detect:0x830
+parse_mipi mipi_lane_swap:0x120, mipi_dndp_swap:0x0
+camera_set_sclk
+camera_set_sclk csi0_sclk:24000000
+ak_ion_get_idev ok
+ion_client_create ok
+install mipi sensor modules
+mis2008_probe May 25 2023 16:20:45
+id:0
+mis2008_match fail
+sc2331_probe Aug 25 2023 17:52:30
+id:cb5c
+i2c i2c-0: sc2331 Probed success, subdev:c3a6601c
+umap_bridge_init
+file_ctrl mutex init success 
+user_online mutex init success 
+audio_play mutex init success 
+voice_tip_queue mutex init success 
+[HalIniFileIsDespMode-112]/mnt/mtd/mvconf/default/factory_cfg.ini:3070
+[1;34m[1970-01-01 08:00:05] [0:00:05:442] [1;0m[DEF] [__hal_calc_factorycfg_md5-26]read size:3070 file_size:3070 [0m
+[1;34m[1970-01-01 08:00:05] [0:00:05:444] [1;0m[DEF] [LOG] open file:/tmp/bt.log [0m
+[1;34m[1970-01-01 08:00:05] [0:00:05:446] [1;0m[DEF] [__hal_calc_factorycfg_md5]cfg md5:1ED33987172D9752F2CD5B139FF4BFD3[0m
+[1;34m[1970-01-01 08:00:05] [0:00:05:446] [1;0m[DEF] [HalIniFileCheckFactorycfgMD5] record:1ED33987172D9752F2CD5B139FF4BFD3 calc:1ED33987172D9752F2CD5B139FF4BFD3[0m
+[HalIniFileCheckFactorycfgMD5-95]
+[1;34m[1970-01-01 08:00:05] [0:00:05:436] [1;0m[DEF] net module power up[0m
+gpio: 16, dir:out
+[1;31m[1970-01-01 08:00:05] [0:00:05:459] [1;31m[ERR] gpio [16] set val [-1] fail[0m
+[1;34m[1970-01-01 08:00:05] [0:00:05:460] [1;0m[DEF] gpio: 16, value:1[0m
+[1;33m[1970-01-01 08:00:05] [0:00:05:460] [1;33m[WARN] /sys/class/gpio/gpio0: not exist[0m
+voice_tip_queue mutex uninit success 
+audio_play mutex uninit success 
+user_online mutex uninit success 
+file_ctrl mutex uninit success 
+file_ctrl mutex init success 
+user_online mutex init success 
+audio_play mutex init success 
+voice_tip_queue mutex init success 
+[_elicense_data_checkout][l:3174]code: -4
+old encrytion-chip [0x247cc10 , 38259728] check ->
+echip - 83026058 , 62
+[HalIniFileIsDespMode-112]/mnt/mtd/mvconf/default/factory_cfg.ini:3070
+[1;34m[1970-01-01 08:00:06] [0:00:06:602] [1;0m[DEF] [__hal_calc_factorycfg_md5-26]read size:3070 file_size:3070 [0m
+[1;34m[1970-01-01 08:00:06] [0:00:06:603] [1;0m[DEF] [LOG] open file:/tmp/bt.log [0m
+[1;34m[1970-01-01 08:00:06] [0:00:06:604] [1;0m[DEF] [__hal_calc_factorycfg_md5]cfg md5:1ED33987172D9752F2CD5B139FF4BFD3[0m
+[1;34m[1970-01-01 08:00:06] [0:00:06:604] [1;0m[DEF] [HalIniFileCheckFactorycfgMD5] record:1ED33987172D9752F2CD5B139FF4BFD3 calc:1ED33987172D9752F2CD5B139FF4BFD3[0m
+[HalIniFileCheckFactorycfgMD5-95]
+[1;34m[1970-01-01 08:00:06] [0:00:06:600] [1;0m[DEF] === [did:83026058][pid:62][vid:0] ===[0m
+voice_tip_queue mutex uninit success 
+audio_play mutex uninit success 
+user_online mutex uninit success 
+file_ctrl mutex uninit success 
+
+=============================================================
+watchdog ver: v1.0.1.0
+[commit:5ae8a7a 2019-08-02 14:02:29 +0800]
+[build:Jun  6 2022_17:42:06]
+=============================================================
+
+hw_watchdog_init_hal
+hw_watchdog_settimeout_hal
+system_call_r Child PID is 491
+file_ctrl mutex init success 
+build log_upload date:Nov  8 2023_09:48:20
+file_ctrl mutex init success 
+user_online mutex init success 
+audio_play mutex init success 
+voice_tip_queue mutex init success 
+[HalIniFileIsDespMode-112]/mnt/mtd/mvconf/default/factory_cfg.ini:3070
+[1;34m[1970-01-01 08:00:06] [0:00:06:993] [1;0m[DEF] [__hal_calc_factorycfg_md5-26]read size:3070 file_size:3070 [0m
+[1;34m[1970-01-01 08:00:06] [0:00:06:994] [1;0m[DEF] [LOG] open file:/tmp/bt.log [0m
+[1;34m[1970-01-01 08:00:06] [0:00:06:995] [1;0m[DEF] [__hal_calc_factorycfg_md5]cfg md5:1ED33987172D9752F2CD5B139FF4BFD3[0m
+[1;34m[1970-01-01 08:00:06] [0:00:06:996] [1;0m[DEF] [HalIniFileCheckFactorycfgMD5] record:1ED33987172D9752F2CD5B139FF4BFD3 calc:1ED33987172D9752F2CD5B139FF4BFD3[0m
+[HalIniFileCheckFactorycfgMD5-95]
+[1;34m[1970-01-01 08:00:06] [0:00:06:990] [1;0m[DEF] version:V1.1.0 build date:Aug 15 2024 11:44:03[0m
+[1;34m[1970-01-01 08:00:07] [0:00:07:059] [1;0m[DEF] pcba_check_enable:0 login_status:0, don't need check pcba[0m
+[_elicense_data_checkout][l:3174]code: -4
+old encrytion-chip [0x247cc10 , 38259728] check ->
+echip - 83026058 , 62
+[1;34m[1970-01-01 08:00:07] [0:00:07:082] [1;0m[DEF] === [did:83026058][pid:62][vid:0] ===[0m
+[LOG] upload init
+[1;34m[1970-01-01 08:00:07] [0:00:07:084] [1;0m[DEF] [LOG] upload init, switch:0 [0m
+[1;34m[1970-01-01 08:00:07] [0:00:07:085] [1;0m[DEF] mv_sdcard_manage_init start [0m
+[1;34m[1970-01-01 08:00:07] [0:00:07:092] [1;0m[DEF] [mv_export_hsipc_config_file]exportHsIpcCfgFile.txt not found.[0m
+[1;34m[1970-01-01 08:00:07] [0:00:07:092] [1;0m[DEF] mv_ipc_config_load start [0m
+== sensor_type[2331] ==
+=== manufacturers_num[0], sensor_id_num[0], type[1346], width[1280], height[720], manufacturers[sc] ===
+=== manufacturers_num[0], sensor_id_num[1], type[2331], width[1920], height[1080], manufacturers[sc] ===
+=== width[1920], height[1080], manufacturers[sc] ===
+[1;34m[1970-01-01 08:00:07] [0:00:07:093] [1;0m[DEF] sensor width:1920 high:1080[0m
+[1;34m[1970-01-01 08:00:07] [0:00:07:094] [1;0m[DEF] read /mnt/mtd/mvconf/avframe_attr.ini [0m
+[1;34m[1970-01-01 08:00:07] [0:00:07:095] [1;0m[DEF] read /mnt/mtd/mvconf/record.ini [0m
+[1;34m[1970-01-01 08:00:07] [0:00:07:096] [1;0m[DEF] read /mnt/mtd/mvconf/factory_const.ini [0m
+[1;34m[1970-01-01 08:00:07] [0:00:07:097] [1;0m[DEF] force level max:3[0m
+[1;34m[1970-01-01 08:00:07] [0:00:07:098] [1;0m[DEF] crop w:1920, crop h:1080[0m
+[1;34m[1970-01-01 08:00:07] [0:00:07:098] [1;0m[DEF] new force level:3 old force level:0 sensor w:1920 h:1080 target w:2304 h:1296 [0m
+============= dev attr ============
+lens type: 0
+network reset mode: 0
+vframe encode type: 2
+aframe encode type: 4
+light ctrl: 2
+fps-max: d[0]-n[0]
+Main: 2304 * 1296
+Sub:  640 * 360
+===================================
+[1;34m[1970-01-01 08:00:07] [0:00:07:099] [1;0m[DEF] read /mnt/mtd/mvconf/user_info.ini [0m
+[1;34m[1970-01-01 08:00:07] [0:00:07:100] [1;0m[DEF] read /mnt/mtd/mvconf/version.ini [0m
+=============== [TIME_SCHEDULE] init ==============
+time_cnt: 0
+ct1: 0
+stime_hms: 00-00-00
+etime_hms: 00-00-00
+ct2: 0
+stime_hms: 00-00-00
+etime_hms: 00-00-00
+ct3: 0
+stime_hms: 00-00-00
+etime_hms: 00-00-00
+area_x_cnt: 6
+area_y_cnt: 8
+area:
+========================0
+1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1
+------------------------32
+1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1
+===================================
+gpio: 65, dir:out
+[1;34m[1970-01-01 08:00:07] [0:00:07:123] [1;0m[DEF] gpio: 65, value:0[0m
+gpio: 66, dir:out
+[1;34m[1970-01-01 08:00:07] [0:00:07:124] [1;0m[DEF] gpio: 66, value:0[0m
+[1;33m[1970-01-01 08:00:07] [0:00:07:124] [1;33m[WARN] /sys/class/gpio/gpio16: exist[0m
+gpio: 16, dir:out
+[1;34m[1970-01-01 08:00:07] [0:00:07:124] [1;0m[DEF] gpio: 16, value:1[0m
+gpio: 10, dir:out
+[1;34m[1970-01-01 08:00:07] [0:00:07:138] [1;0m[DEF] gpio: 10, value:0[0m
+gpio: 9, dir:out
+[1;34m[1970-01-01 08:00:07] [0:00:07:149] [1;0m[DEF] gpio: 9, value:0[0m
+gpio: 69, dir:out
+[1;34m[1970-01-01 08:00:07] [0:00:07:168] [1;0m[DEF] gpio: 69, value:0[0m
+gpio: 50, dir:in
+gpio: 50, pull:pullup
+** ak common version: libplat_common V1.0.22 **
+[1;34m[1970-01-01 08:00:07] [0:00:07:201] [1;0m[DEF] get driver buf:8 ret:0[0m
+[1;34m[1970-01-01 08:00:07] [0:00:07:201] [1;0m[DEF] set driver buf:16 ret:0[0m
+-----dac set source
+mv_ao_init success...
+ao set attr type:4 ret:0
+mv_adec_open success
+audiotool not start,sw:0
+[mvp_ao_set_volume]set ao vol:80
+[_prompt_file_pick][l:206]prompt content [sf_devstarting] [/mnt/mtd/mvsound/1107/sf_devstarting.mp3] caught.
+[1;34m[1970-01-01 08:00:07] [0:00:07:433] [1;0m[DEF] gpio: 69, value:1[0m
+f:mvp_ao_play_file l:924 
+ai or ao not init
+play mp3 file /mnt/mtd/mvsound/1107/sf_devstarting.mp3...
+Play Finished, mp3 decoder size:59904
+cdc_acm 1-1:1.2: Zero length descriptor references
+cdc_acm 1-1:1.3: This needs exactly 3 endpoints
+cdc_acm 1-1:1.4: Zero length descriptor references
+cdc_acm 1-1:1.5: Zero length descriptor references
+go out play mp3 file /mnt/mtd/mvsound/1107/sf_devstarting.mp3 , break_status:0 
+ai or ao not init
+user_online mutex init success 
+file_ctrl mutex init success 
+[1;34m[[0d] 00:00:11:490][0m [INFO] [PRERUN] ############## start ############## 
+[1;34m[[0d] 00:00:11:490][0m [INFO] 
+[PRERUN] build:Feb 18 2024_12:15:31 version:V1.0.0 
+f:mvp_sdcard_mount l:32 
+[1;34m[[0d] 00:00:11:490][0m [INFO] [PRERUN] ############## exit ############## 
+file_ctrl mutex uninit success 
+user_online mutex uninit success 
+[product_check]product-id:62 max supprot resulotion(2304_1536)
+[1;33m[1970-01-01 08:00:11] [0:00:11:492] [1;33m[WARN] led init no led_num [0m
+[1;34m[1970-01-01 08:00:11] [0:00:11:492] [1;0m[DEF] media init start [0m
+=================================================
+mdq ver: 1.0.3_cdd3097[build:Apr 18 2024_15:30:37]
+=================================================
+== mv_platform_ai_init ==
+frame_len=960
+[board_ai_init][default mode] AI gain: 4
+adc get gain: 3
+mv_ai_init success...
+ai set attr type:0 ret:0
+ai set attr type:1 ret:0
+ai set attr type:2 ret:0
+[1;31m[1970-01-01 08:00:11] [0:00:11:523] [1;31m[ERR] ak_ai_set_aec_attr ret = 0[0m
+ai set attr type:3 ret:0
+ai set attr type:4 ret:0
+mv_aenc_param->audio_codec_type =============== 2
+mv_aenc_open success
+== mv_platform_ai_start_capture ==
+*** ai capture start, _g_ai_handle_id ***
+wait aenc param copy over
+=== mvak_start_ai_encode success handle_id ===
+camera_set_vclk
+== sensor_type[2331] ==
+=== manufacturers_num[0], sensor_id_numcamera_set_vclk isp_clk:348160000
+[0], type[1346], width[1280], height[720], manufacturers[sc] ===
+=== manufacturers_num[0], sensor_id_num[1], type[2331], width[1920], height[1080], manufacturers[sc] ===
+=== width[1920], height[1080], manufacturers[sc] ===
+[1;34m[1970-01-01 08:00:11] [0:00:11:629] [1;0m[DEF] sensor info sensor_type[2331], sensor_width[1920], sensor_height[1080], sensor_manufacturers[sc][0m
+mvp_isp_init
+isptool not start,sw:0
+isp init sensor[2331]
+ispsdk_lib version:libplat_isp_sdk V8.0.01 
+open isp dev: /dev/isp-param-0
+--- AK_ISP_sdk_init g_isp_fd[0]=9 ---
+[1;34m[1970-01-01 08:00:11] [0:00:11:649] [1;0m[DEF] isp path [/mvs/isp_cfg/isp_sc2331_mipi_0.conf][0m
+### Get vi info res main[2304, 1296], sub[640, 360] ###sc2331_cropcap bounds.width:1920, bounds.height:1080
+
+
+set devid [0] ------>
+crop.left [0], crop.top [0], crop.width [priv_dma_alloc req_len:3891200, dma_addr:2168455168, act_len:3891200
+1920], crop.height [1080]
+max_width [2304], max_height [1296], isp_param_file_mmap 6923 vm_iomap_memory ok. vm_start:0xb6101000 dma_addr:0x81400000, size:3891200
+sub_max_width [640], sub_max_height [360]
+
+sc2331_s_crop 874, left:0, top:0, width:1920, height:1080
+sc2331_cropcap bounds.width:1920, bounds.height:1080
+
+get devid [0] ------>
+crop.left [0], crop.top [0], crop.width [set_done_mode input#0 chn#0 done_mode:1
+1920], crop.height [1080]
+max_width [2304], max_height [1296], set_slice_num input#0 chn#0 slice_num:4
+sub_max_width [640], sub_max_height [360]
+
+set_block_num input#0 chn#0 block_num:4
+sc2331_cropcap bounds.width:1920, bounds.height:1080
+set_done_mode input#0 chn#1 done_mode:0
+sc2331_cropcap bounds.width:1920, bounds.height:1080
+ak_vb2_dc_alloc 1678 size:4866048
+ak_vb2_dc_alloc chn#0-0 alloc big_dma_addr data_size:4866048=1*4866048 (num*size),  total_alloc_size=4866048+0 (alloc_size+alloc_size_other)
+priv_dma_alloc req_len:4866048, dma_addr:2172346368, act_len:4866048
+ak_vb2_dc_alloc vaddr:c52b8000, dma_addr:0x817b6000, size:4866048, users:0/1
+ak_vb2_dc_cookie 1989
+ak_vb2_dc_mmap 1969 vm_iomap_memory ok. vm_start:0xb5c5d000 dma_addr:0x817b6000,size:4866048
+ak_vb2_dc_alloc 1678 size:348160
+ak_vb2_dc_alloc chn#0-1 alloc big_dma_addr data_size:691200=2*345600 (num*size),  total_alloc_size=696320+0 (alloc_size+alloc_size_other)
+priv_dma_alloc req_len:696320, dma_addr:2177212416, act_len:696320
+ak_vb2_dc_alloc vaddr:c575d000, dma_addr:0x81c5a000, size:348160, users:0/2
+ak_vb2_dc_cookie 1989
+ak_vb2_dc_alloc 1678 size:348160
+ak_vb2_dc_alloc vaddr:c57b2000, dma_addr:0x81caf000, size:348160, users:1/2
+ak_vb2_dc_cookie 1989
+ak_vb2_dc_mmap 1969 vm_iomap_memory ok. vm_start:0xb5c08000 dma_addr:0x81c5a000,size:348160
+ak_vb2_dc_mmap 1969 vm_iomap_memory ok. vm_start:0xb5bb3000 dma_addr:0x81caf000,size:348160
+camera_calc_block_num chn#0 one_slice_size:1216512, buf_size:4866048, block_num:4
+chn#0 block_num:4, slice_num:4
+ak3918av100_factor_clk: Waiting 0xf000800c:(0x19f40a1f) shift 9 mask 0x1 timeout
+0014: mipi_top_clk_init 96 44ab087f
+MACH_AK3918EV300L sharpin!
+camera_input_interface_init mipi
+camera_set_sharepin
+sc2331_sensor_get_parameter_func param:8199 not support
+sc2331_sensor_get_parameter_func param:8200 not support
+sc2331_sensor_get_parameter_func param:8201 not support
+camera_set_pp_chn_buffer_addr_default 2412
+f:mv_isp_set_standard, l:419, mode:1
+f:mvp_isp_standard_set, l:921, env_mode:-1
+venc_dma_alloc req_len:7066432, dma_addr:2177908736, act_len:7069696
+venc_dma_alloc req_len:1119744, dma_addr:2184978432, act_len:1122304
+[1;34m[1970-01-01 08:00:12] [0:00:12:352] [1;0m[DEF] _pth_ctrl_fps start, fps:20[0m
+[mvp_video_venc_init]ak_venc_strictlylimit_frameSize:ret:0
+venc_dma_alloc req_len:1007680, dma_addr:2186100736, act_len:1011712
+venc_dma_alloc req_len:86400, dma_addr:2187112448, act_len:90112
+venc_dma_alloc req_len:488192, dma_addr:2187550720, act_len:491520
+venc_dma_alloc req_len:196608, dma_addr:2188042240, act_len:196608
+b2e_encode_bind_isp_channel input#0,chn#0
+main_osd_x_offset:1657, main_width:646, p[MV_VIDEO_MAIN_CHN].width:2304
+=== mvak_start_video_osd success ===
+=== mvp_isp_flip_and_mirror 3 ===
+=== sensor type [2331] ===
+sc2331_cropcap bounds.width:1920, bounds.height:1080
+
+ak_venc_request_idr [0] success
+[1;34m[1970-01-01 08:00:12] [0:00:12:534] [1;0m[DEF] media init finish [0m
+[1;33m[1970-01-01 08:00:12] [0:00:12:534] [1;33m[WARN] zoom type:0 [0m
+[1;34m[1970-01-01 08:00:12] [0:00:12:535] [1;0m[DEF] mv_network_init start [0m
+[QR TEST]window param: [w:320][h:360][x:160][y:0]
+[1;34m[1970-01-01 08:00:12] [0:00:12:537] [1;0m[DEF] [mv_alarm_init] start[0m
+########MRD Lib V1.0.09########
+[1;34m[1970-01-01 08:00:12] [0:00:12:560] [1;0m[DEF] ptz ctrl init [0m
+[1;34m[1970-01-01 08:00:12] [0:00:12:563] [1;0m[DEF] ====== AUTHORITY_SUPPORT ======[0m
+=== [ptz cruise info] === 
+ptz positiontotal cnt:6 
+ptz cruise route total cnt:1 
+ptz cruise route position max:6 
+action_type:1 
+ptz timer enable:0 
+ptz_timer cnt:0 
+ptz auto enable:0 
+ptz auto routine cnt:0 
+=== [timer info] ===
+=== [auto info] ===
+[1;34m[1970-01-01 08:00:12] [0:00:12:566] [1;0m[DEF] switch ptz speed hz : 900[0m
+[1;34m[1970-01-01 08:00:12] [0:00:12:567] [1;0m[DEF] switch ptz speed hz : 900[0m
+[1;34m[1970-01-01 08:00:12] [0:00:12:574] [1;0m[DEF] ======= check eth0 mac =======[0m
+[1;34m[1970-01-01 08:00:12] [0:00:12:587] [1;0m[DEF] ===== set motor params ====[0m
+[1;34m[1970-01-01 08:00:12] [0:00:12:587] [1;0m[DEF] === H _g_motorparm.steps_one_circle[8250], _g_motorparm.total_steps[8200] ===[0m
+[1;34m[1970-01-01 08:00:12] [0:00:12:587] [1;0m[DEF] === H _g_motorparm.steps_one_circle[1000], _g_motorparm.total_steps[1000] ===[0m
+[privacy_ptz_check_sw]pm_open_count:0
+[privacy_ptz_check_sw][0]delay ptz self check:0 0 0 0 
+[1;34m[1970-01-01 08:00:12] [0:00:12:589] [1;0m[DEF] go to ptz self check[0m
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1MAINCHN0 iomap c26de000 826de000 size:16016
+ 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1SUBCHN0 iomap c26ea000 826ea000 size:4403
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+[1;34m[197eth0 owns a shared interrupt on netdev->irq 17
+0-01-01 08:00:12] [0:00:12:642] [1;0m[DEF] mv_input_scaner_initsetting up the cable unplug timer0 for mac0
+ start [0m
+== irfm_lock_state [0] invalid of (1/3/4), set default [0:IR_FEED_STATE_AUTO] ==
+[1;34m[1970-01-01 08:00:12] [0:00:12:644] [1;0m[DEF] ircut IRCUT_A1_B0 [0m
+[1;34m[1970-01-01 08:00:12] [0:00:12:645] [1;0m[DEF] gpio: 65, value:1[0m
+[1;34m[1970-01-01 08:00:12] [0:00:12:645] [1;0m[DEF] gpio: 66, value:0[0m
+add client 82473436713
+add client 73100331840
+[1;34m[1970-01-01 08:00:12] [0:00:12:784] [1;0m[DEF] ircut IRCUT_A0_B0 [0m
+[1;34m[1970-01-01 08:00:12] [0:00:12:784] [1;0m[DEF] gpio: 65, value:0[0m
+[1;34m[1970-01-01 08:00:12] [0:00:12:785] [1;0m[DEF] gpio: 66, value:0[0m
+[1;34m[1970-01-01 08:00:12] [0:00:12:856] [1;0m[DEF] [ETHER] eth0 set 0 [0m
+[1;34m[1970-01-01 08:00:12] [0:00:12:857] [1;0m[DEF] [NETWORK] flag set:0 [0m
+[1;34m[1970-01-01 08:00:12] [0:00:12:858] [1;0m[DEF] gpio: 16, value:1[0m
+f:mvp_isp_mode_set, l:767, mode:0
+>>> set standard mode:1,hz:50
+=========== [mvp_isp_printf_ae_attr] ===========
+exp_time_max:3376 exp_time_min:1
+d_gain_max:256 d_gain_min:256
+isp_d_gain_max:768 isp_d_gain_min:256
+a_gain_max:8192 a_gain_min:256
+ae_route_en:0 ae_route_node_num:3
+ae_route_node[0] exp_time:224 again:256 dgain:256 isp_dgain:256
+ae_route_node[1] exp_time:224 again:512 dgain:256 isp_dgain:256
+ae_route_node[2] exp_time:1124 again:512 dgain:256 isp_dgain:256
+ae_route_node[3] exp_time:2 again:256 dgain:256 isp_dgain:256
+ae_route_node[4] exp_time:3 again:256 dgain:256 isp_dgain:256
+ae_route_node[5] exp_time:2 again:256 dgain:256 isp_dgain:256
+ae_route_node[6] exp_time:2 again:256 dgain:256 isp_dgain:256
+ae_route_node[7] exp_time:2 again:256 dgain:256 isp_dgain:256
+ae_route_node[8] exp_time:2 again:256 dgain:256 isp_dgain:256
+ae_route_node[9] exp_time:1 again:256 dgain:256 isp_dgain:256
+ae_route_node[10] exp_time:1 again:256 dgain:256 isp_dgain:256
+ae_route_node[11] exp_time:1 again:256 dgain:256 isp_dgain:256
+ae_route_node[12] exp_time:1 again:256 dgain:256 isp_dgain:256
+ae_route_node[13] exp_time:1 again:256 dgain:256 isp_dgain:256
+ae_route_node[14] exp_time:1 again:256 dgain:256 isp_dgain:256
+ae_route_node[15] exp_time:1 again:256 dgain:256 isp_dgain:256
+============================
+>>> set standard exp time:1
+[mvak_md_set_day_night_mode]set region size:8-300
+[mvak_md_set_day_night_mode]set filters:big[10000] small[5000] ret[0]
+[mvak_md_set_day_night_mode]set mode:1 ret:0
+[1;33m[1970-01-01 08:00:13] [0:00:13:056] [1;33m[WARN] find sensor: 2331 irfm param, now use it[0m
+[1;33m[1970-01-01 08:00:13] [0:00:13:057] [1;33m[WARN] find sensor: 2331 soft index:3[0m
+[1;33m[1970-01-01 08:00:13] [0:00:13:057] [1;33m[WARN] [scaner] [_irfm_run] use SOFT_IRFEED_V2[0m
+[1;34m[1970-01-01 08:00:13] [0:00:13:058] [1;0m[DEF] mvs_dd_service_init start [0m
+[1;34m[1970-01-01 08:00:13] [0:00:13:058] [1;0m[DEF] init ip: mac: netmask: gw: [0m
+[1;34m[1970-01-01 08:00:13] [0:00:13:058] [1;0m[DEF] mv_server_init init start[0m
+[1;34m[1970-01-01 08:00:13] [0:00:13:365] [1;0m[DEF] check wifi module (lsusb) [1/2][0m
+[1;34m[1970-01-01 08:00:13] [0:00:13:401] [1;0m[DEF] lsusb:
+Bus 001 Device 003: ID 2ecc:3010
+Bus 001 Device 001: ID 1d6b:0002
+ [0m
+Can't Open Serial Port: No such file or directory
+[1;31m[1970-01-01 08:00:13] [0:00:13:402] [1;31m[ERR] [LTE4G] /dev/ttyACM0 open failed[0m
+[1;32m[1970-01-01 08:00:13] [0:00:13:613] [1;32m[INFO] [LTE4G] [mvp_lte4g_module_type_check]ati:
+
+CIS
+
+ZX800
+
+Revision: 800SGBFRI00G0456
+
+
+
+OK
+
+[0m
+[1;32m[1970-01-01 08:00:13] [0:00:13:614] [1;32m[INFO] [LTE4G] ZX800-SG[0m
+[mvp_lte4g_module_type_check--1727]lte4g module: 219
+[1;34m[1970-01-01 08:00:13] [0:00:13:623] [1;0m[DEF] module type:219 [0m
+#######login handle create: 22932##########
+[1;34m[1970-01-01 08:00:13] [0:00:13:661] [1;0m[DEF] mv_server_init init finish[0m
+[1;34m[1970-01-01 08:00:13] [0:00:13:665] [1;0m[DEF] === end ===[0m
+
+=============================================================
+[build:Aug 15 2024_11:44:04]
+==============================================================
+env mode:0 
+[__lte4g_get_ifname-250]get ifname->eth1
+[1;34m[1970-01-01 08:00:15] [0:00:15:635] [1;0m[DEF] [NETWORK] module type:219[0m
+[1;33m[1970-01-01 08:00:17] [0:00:17:940] [1;33m[WARN] fps ctrl stat:0, fps:12[0m
+[1;34m[1970-01-01 08:00:18] [0:00:18:651] [1;0m[DEF] [get] _gs32_ether_status:0 _gs32_ether_last_status:-1 _gs32_sockfd:44 [0m
+[1;34m[1970-01-01 08:00:18] [0:00:18:652] [1;0m[DEF] [NETWORK] eth link status:3[0m
+[1;34m[1970-01-01 08:00:19] [0:00:19:658] [1;0m[DEF] -------------------- lte4g module into -------------------[0m
+[1;34m[1970-01-01 08:00:19] [0:00:19:658] [1;0m[DEF] [LTE4G] at dev:/dev/ttyUSB0 ifname:eth1 [0m
+[1;34m[1970-01-01 08:00:19] [0:00:19:659] [1;0m[DEF] [4G] eth1 set 0 [0m
+[1;32m[1970-01-01 08:00:20] [0:00:20:676] [1;32m[INFO] [LTE4G] SIM ID: 01201415[0m
+[1;34m[1970-01-01 08:00:20] [0:00:20:676] [1;0m[DEF] [_mv_lte4g_set_apn] iccid no record [0m
+[mv_get_apn_lock][137] lock:255
+apn:, user: , pwd: , authmode: 0
+[1;32m[1970-01-01 08:00:20] [0:00:20:684] [1;32m[INFO] [LTE4G] IMSI: 9974712[0m
+[mv_get_apn_lock][137] lock:255
+[__read_conf_get_apn_list-367]iccid:[896501]len:[6]
+[__read_conf_get_apn_list-375]imsi:[52501]len:[5]
+[__read_conf_get_apn_list-380]apn:[public.dcp.singtel.com]len:[22]
+[__read_conf_get_apn_list-367]iccid:[896604]len:[6]
+[__read_conf_get_apn_list-375]imsi:[52004]len:[5]
+[__read_conf_get_apn_list-380]apn:[m2mhispeed]len:[10]
+[__read_conf_get_apn_list-367]iccid:[893204]len:[6]
+[__read_conf_get_apn_list-375]imsi:[20628]len:[5]
+[__read_conf_get_apn_list-380]apn:[bicsapn]len:[7]
+[__read_conf_get_apn_list-367]iccid:[893204]len:[6]
+[__read_conf_get_apn_list-375]imsi:[20809]len:[5]
+[__read_conf_get_apn_list-380]apn:[bicsapn]len:[7]
+[__read_conf_get_apn_list-367]iccid:[898522]len:[6]
+[__read_conf_get_apn_list-375]imsi:[45403]len:[5]
+[__read_conf_get_apn_list-380]apn:[mobile.three.com.hk]len:[19]
+[__read_conf_get_apn_list-367]iccid:[893571]len:[6]
+[__read_conf_get_apn_list-375]imsi:[45403]len:[5]
+[__read_conf_get_apn_list-380]apn:[eiotclub]len:[8]
+[__read_conf_get_apn_list-367]iccid:[893571]len:[6]
+[__read_conf_get_apn_list-375]imsi:[311588]len:[6]
+[__read_conf_get_apn_list-380]apn:[eiotclub]len:[8]
+[__read_conf_get_apn_list-367]iccid:[893571]len:[6]
+[__read_conf_get_apn_list-375]imsi:[222013]len:[6]
+[__read_conf_get_apn_list-380]apn:[eiotclub]len:[8]
+[__read_conf_get_apn_list-337]mvt_djson_array_parser error:-30
+[__read_conf_get_apn_list-385]p->0x89ce40
+[__read_conf_get_apn_list-386]return:8
+[mv_get_auto_apn_info-405]p->0x89ce40
+[mv_get_auto_apn_info-408]cnt:[0->8]iccid[70120141560]->[896501]
+[mv_get_auto_apn_info-408]cnt:[1->8]iccid[70120141560]->[896604]
+[mv_get_auto_apn_info-408]cnt:[2->8]iccid[70120141560]->[893204]
+[mv_get_auto_apn_info-408]cnt:[3->8]iccid[70120141560]->[893204]
+[mv_get_auto_apn_info-408]cnt:[4->8]iccid[70120141560]->[898522]
+[mv_get_auto_apn_info-408]cnt:[5->8]iccid[70120141560]->[893571]
+[mv_get_auto_apn_info-408]cnt:[6->8]iccid[70120141560]->[893571]
+[mv_get_auto_apn_info-408]cnt:[7->8]iccid[70120141560]->[893571]
+[__read_conf_release_apn_info-249]index
+[mv_get_auto_apn_info]apn not match
+[1;31m[1970-01-01 08:00:20] [0:00:20:702] [1;31m[ERR] [_mv_lte4g_set_apn]auto get apn failed!:-22[0m
+[_prompt_file_pick][l:206]prompt content [sf_4G_network_connecting] [/mnt/mtd/mvsound/1107/sf_4G_network_connecting.mp3] caught.
+[1;34m[1970-01-01 08:00:20] [0:00:20:703] [1;0m[DEF] gpio: 69, value:1[0m
+f:mvp_ao_play_file l:924 
+ai set attr type:3 ret:0
+play mp3 file /mnt/mtd/mvsound/1107/sf_4G_network_connecting.mp3...
+Play Finished, mp3 decoder size:40320
+[1;33m[1970-01-01 08:00:23] [0:00:23:061] [1;33m[WARN] fps ctrl stat:0, fps:12[0m
+go out play mp3 file /mnt/mtd/mvsound/1107/sf_4G_network_connecting.mp3 , break_status:0 
+ai set attr type:3 ret:0
+[1;34m[1970-01-01 08:00:23] [0:00:23:389] [1;0m[DEF] [_run_lte4g_manage] record iccid:[0m
+[1;32m[1970-01-01 08:00:23] [0:00:23:396] [1;32m[INFO] [LTE4G] SIM ID: 70120141560[0m
+[1;34m[1970-01-01 08:00:23] [0:00:23:396] [1;0m[DEF] [_run_lte4g_manage-1723]set timeout:30->cnt:16[0m
+[1;34m[1970-01-01 08:00:23] [0:00:23:396] [1;0m[DEF] [LTE4G] module:219 connecting [0m
+[1;32m[1970-01-01 08:00:23] [0:00:23:510] [1;32m[INFO] [LTE4G] >>>AT+SWITCHSIM? recv:AT+SWITCHSIM?
+
+
++SWITCHSIM: SIM1
+
+SIM1>
+
+OK
+
+SIM1>[0m
+[1;32m[1970-01-01 08:00:23] [0:00:23:516] [1;32m[INFO] [LTE4G] >>>AT+SWITCHSIM=0 recv:AT+SWITCHSIM=0
+
+
+OK
+
+SIM1>[0m
+[1;33m[1970-01-01 08:00:23] [0:00:23:524] [1;33m[WARN] [LTE4G] >>>>> AT+CPIN? recv=AT+CPIN?
+
+
++CPIN: READY
+
+SIM1>
+
+OK
+
+SIM1>[0m
+[1;32m[1970-01-01 08:00:23] [0:00:23:525] [1;32m[INFO] [LTE4G] >>> _lte4g_ZX800RG_connect[1192] has SIM card[0m
+[1;32m[1970-01-01 08:00:23] [0:00:23:538] [1;32m[INFO] [LTE4G] >>> has SIM card[0m
+[1;32m[1970-01-01 08:00:23] [0:00:23:545] [1;32m[INFO] [LTE4G] >>> get sim card ccid OK,ccid[70120141560][0m
+[1;31m[1970-01-01 08:00:23] [0:00:23:551] [1;31m[ERR] [LTE4G] >>> SIM card can not connect to the network buff:AT+CEREG?
+
+
++CEREG: 0,0
+
+SIM1>
+
+OK
+
+SIM1>[0m
+[1;34m[1970-01-01 08:00:23] [0:00:23:752] [1;0m[DEF] [LTE4G] connect duration:0 count:1, eth0_run:1, ret:-1[0m
+[1;32m[1970-01-01 08:00:24] [0:00:24:875] [1;32m[INFO] [LTE4G] >>>AT+SWITCHSIM? recv:AT+SWITCHSIM?
+
+
++SWITCHSIM: SIM1
+
+SIM1>
+
+OK
+
+SIM1>[0m
+[1;32m[1970-01-01 08:00:24] [0:00:24:882] [1;32m[INFO] [LTE4G] >>>AT+SWITCHSIM=0 recv:AT+SWITCHSIM=0
+
+
+OK
+
+SIM1>[0m
+[1;33m[1970-01-01 08:00:24] [0:00:24:889] [1;33m[WARN] [LTE4G] >>>>> AT+CPIN? recv=AT+CPIN?
+
+
++CPIN: READY
+
+SIM1>
+
+OK
+
+SIM1>[0m
+[1;32m[1970-01-01 08:00:24] [0:00:24:889] [1;32m[INFO] [LTE4G] >>> _lte4g_ZX800RG_connect[1192] has SIM card[0m
+[1;32m[1970-01-01 08:00:24] [0:00:24:901] [1;32m[INFO] [LTE4G] >>> has SIM card[0m
+[1;32m[1970-01-01 08:00:24] [0:00:24:907] [1;32m[INFO] [LTE4G] >>> get sim card ccid OK,ccid[70120141560][0m
+[1;31m[1970-01-01 08:00:24] [0:00:24:913] [1;31m[ERR] [LTE4G] >>> SIM card can not connect to the network buff:AT+CEREG?
+
+
++CEREG: 0,0
+
+SIM1>
+
+OK
+
+SIM1>[0m
+[1;34m[1970-01-01 08:00:25] [0:00:25:124] [1;0m[DEF] [LTE4G] connect duration:2 count:2, eth0_run:1, ret:-29[0m
+[1;32m[1970-01-01 08:00:26] [0:00:26:242] [1;32m[INFO] [LTE4G] >>>AT+SWITCHSIM? recv:AT+SWITCHSIM?
+
+
++SWITCHSIM: SIM1
+
+SIM1>
+
+OK
+
+SIM1>[0m
+[1;32m[1970-01-01 08:00:26] [0:00:26:247] [1;32m[INFO] [LTE4G] >>>AT+SWITCHSIM=0 recv:AT+SWITCHSIM=0
+
+
+OK
+
+SIM1>[0m
+[1;33m[1970-01-01 08:00:26] [0:00:26:252] [1;33m[WARN] [LTE4G] >>>>> AT+CPIN? recv=AT+CPIN?
+
+
++CPIN: READY
+
+SIM1>
+
+OK
+
+SIM1>[0m
+[1;32m[1970-01-01 08:00:26] [0:00:26:252] [1;32m[INFO] [LTE4G] >>> _lte4g_ZX800RG_connect[1192] has SIM card[0m
+[1;32m[1970-01-01 08:00:26] [0:00:26:263] [1;32m[INFO] [LTE4G] >>> has SIM card[0m
+[1;32m[1970-01-01 08:00:26] [0:00:26:269] [1;32m[INFO] [LTE4G] >>> get sim card ccid OK,ccid[70120141560][0m
+[1;31m[1970-01-01 08:00:26] [0:00:26:275] [1;31m[ERR] [LTE4G] >>> SIM card can not connect to the network buff:AT+CEREG?
+
+
++CEREG: 0,0
+
+SIM1>
+
+OK
+
+SIM1>[0m
+[1;34m[1970-01-01 08:00:26] [0:00:26:478] [1;0m[DEF] [LTE4G] connect duration:3 count:3, eth0_run:1, ret:-29[0m
+[1;34m[1970-01-01 08:00:26] [0:00:26:713] [1;0m[DEF] gpio: 69, value:0[0m
+[1;32m[1970-01-01 08:00:27] [0:00:27:603] [1;32m[INFO] [LTE4G] >>>AT+SWITCHSIM? recv:AT+SWITCHSIM?
+
+
++SWITCHSIM: SIM1
+
+SIM1>
+
+OK
+
+SIM1>[0m
+[1;32m[1970-01-01 08:00:27] [0:00:27:609] [1;32m[INFO] [LTE4G] >>>AT+SWITCHSIM=0 recv:AT+SWITCHSIM=0
+
+
+OK
+
+SIM1>[0m
+[1;33m[1970-01-01 08:00:27] [0:00:27:615] [1;33m[WARN] [LTE4G] >>>>> AT+CPIN? recv=AT+CPIN?
+
+
++CPIN: READY
+
+SIM1>
+
+OK
+
+SIM1>[0m
+[1;32m[1970-01-01 08:00:27] [0:00:27:615] [1;32m[INFO] [LTE4G] >>> _lte4g_ZX800RG_connect[1192] has SIM card[0m
+[1;32m[1970-01-01 08:00:27] [0:00:27:624] [1;32m[INFO] [LTE4G] >>> has SIM card[0m
+[1;32m[1970-01-01 08:00:27] [0:00:27:631] [1;32m[INFO] [LTE4G] >>> get sim card ccid OK,ccid[70120141560][0m
+[1;31m[1970-01-01 08:00:27] [0:00:27:637] [1;31m[ERR] [LTE4G] >>> SIM card can not connect to the network buff:AT+CEREG?
+
+
++CEREG: 0,0
+
+SIM1>
+
+OK
+
+SIM1>[0m
+[1;34m[1970-01-01 08:00:27] [0:00:27:845] [1;0m[DEF] [LTE4G] connect duration:4 count:4, eth0_run:1, ret:-29[0m
+[1;34m[1970-01-01 08:00:28] [0:00:28:304] [1;0m[DEF] turn to last pos h:175 v:45[0m
+[1;34m[1970-01-01 08:00:28] [0:00:28:305] [1;0m[DEF] switch ptz speed hz : 800[0m
+[1;34m[1970-01-01 08:00:28] [0:00:28:305] [1;0m[DEF] ===== set motor h speed :800====[0m
+[1;34m[1970-01-01 08:00:28] [0:00:28:305] [1;0m[DEF] switch ptz speed hz : 800[0m
+[1;34m[1970-01-01 08:00:28] [0:00:28:306] [1;0m[DEF] ===== set motor v speed : 800====[0m
+[1;34m[1970-01-01 08:00:28] [0:00:28:306] [1;0m[DEF] == set ptz to position [175, 45], cur position [175, 45]==[0m
+[1;34m[1970-01-01 08:00:28] [0:00:28:310] [1;0m[DEF] ptz init finish[0m
+[1;34m[1970-01-01 08:00:28] [0:00:28:312] [1;0m[DEF] === start mv_recorder ptz_pos ===[0m
+[1;34m[1970-01-01 08:00:28] [0:00:28:312] [1;0m[DEF] === need to record cur postion h:175 v:45===[0m
+[1;32m[1970-01-01 08:00:28] [0:00:28:969] [1;32m[INFO] [LTE4G] >>>AT+SWITCHSIM? recv:AT+SWITCHSIM?
+
+
++SWITCHSIM: SIM1
+
+SIM1>
+
+OK
+
+
+OK
+
+SIM1>[0m
+[1;32m[1970-01-01 08:00:41] [0:00:41:239] [1;32m[INFO] [LTE4G] >>> _lte4g_ZX800RG_connect[1192] has SIM card[0m
+[1;32m[1970-01-01 08:00:41] [0:00:41:251] [1;32m[INFO] [LTE4G] >>> has SIM card[0m
+[1;32m[1970-01-01 08:00:41] [0:00:41:257] [1;32m[INFO] [LTE4G] >>> get sim card ccid OK,ccid[70120141560][0m
+[1;31m[1970-01-01 08:00:41] [0:00:41:265] [1;31m[ERR] [LTE4G] >>> SIM card can not connect to the network buff:AT+CEREG?
+
+
++CEREG: 0,0
+
+SIM1>
+
+OK
+
+SIM1>[0m
+[1;34m[1970-01-01 08:00:41] [0:00:41:467] [1;0m[DEF] [LTE4G] connect duration:18 count:14, eth0_run:1, ret:-29[0m
+[1;32m[1970-01-01 08:00:42] [0:00:42:586] [1;32m[INFO] [LTE4G] >>>AT+SWITCHSIM? recv:AT+SWITCHSIM?
+
+
++SWITCHSIM: SIM1
+
+SIM1>
+
+OK
+
+SIM1>[0m
+[1;32m[1970-01-01 08:00:42] [0:00:42:592] [1;32m[INFO] [LTE4G] >>>AT+SWITCHSIM=0 recv:AT+SWITCHSIM=0
+
