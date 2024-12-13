@@ -1,5 +1,7 @@
 # V380-Web
-Web server for ip cameras V380. Russian and English interfaces are supported.  
+<details>
+  <summary> <b>Web server for ip cameras V380. Russian and English interfaces are supported. </b> </summary> 
+
 ### The HTTP server allows you to
 - perform all sorts of manipulations with the records on the sd card. Now you do not need to take it out of the camera every time;
 - watch the video archive on sd online without removing the card;
@@ -47,6 +49,8 @@ People complain that the Web does not work and send the software version. I can'
 Жалуются, что Web не работает и присылают версию ПО. Ничего не могу сказать по номерам версий. Еще надо протокол установки setup.sh, Хорошо бы ваш Linux скопировать. Главное, чтобы был telnet. Я на примере своей камеры просто показал, что можно самому сделать, если есть telnet. Так, что у кого не работает, разбирайтесь, а если что-то выяснится новое, то я доделаю, чтобы и другие могли использовать. В планах сделать, как будет время и настроение, скрипт для Windows, который будет в фоновом режиме копировать все видео с камеры.
   
 ![Просмотр основных настроек](screenshots/image_2022_08_21T23_12_43_133Z.png?raw=true)
+
+</details>
 
 ### CAM REVISION
 ![](IMG_20241213_092028.jpg)
