@@ -52,13 +52,20 @@ People complain that the Web does not work and send the software version. I can'
 
 </details>
 
-### CAM REVISION
+
+<details>
+<summary> <b> MY CAM REVISION </b> </summary>
+
+
 ![](IMG_20241213_092028.jpg)
 
 ### UART RX
 > [!CAUTION]
 > Расположение контактов может различатся в зависимости от ревизии.
 ![](IMG_20241213_185230.jpg)
+
+
+</details>
 
 ### 4g cam ANYKA AK3918EV300 BOOT LOG
 ![](IMG_20241213_095927.jpg)
@@ -68,5 +75,5 @@ People complain that the Web does not work and send the software version. I can'
 [SPI Dump](https://github.com/sw3nlab/V380-Web/blob/main/4g.bin)
 
 [Клиент под Windows для просмотра 4G камер V380 с компьютера ](https://drive.google.com/file/d/1OxkICOR_1UwQNb8umTJXPohaOjRI6evo/view?usp=drivesdk)
-Китайские клиенты под Win настолько коряво написаны, что разных версиях клиентов разные ограничения на количество символов в пароле при авторизации. 
-В приведенной выше версии пароль из 15 символов проходит на изи.
+>Китайские клиенты под Win настолько коряво написаны, что разных версиях клиентов разные ограничения на количество символов в пароле при авторизации. 
+В приведенной выше версии пароль из 15 символов проходит норм.
