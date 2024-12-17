@@ -77,3 +77,4 @@ People complain that the Web does not work and send the software version. I can'
 [Клиент под Windows для просмотра 4G камер V380 с компьютера ](https://drive.google.com/file/d/1OxkICOR_1UwQNb8umTJXPohaOjRI6evo/view?usp=drivesdk)
 >Китайские клиенты под Win настолько коряво написаны, что разных версиях клиентов разные ограничения на количество символов в пароле при авторизации. 
 В приведенной выше версии пароль из 15 символов проходит норм.
+![](screenshots/screen380.jpg)
