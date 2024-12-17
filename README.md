@@ -66,3 +66,5 @@ People complain that the Web does not work and send the software version. I can'
 [FULL Boot Log](https://raw.githubusercontent.com/sw3nlab/V380-Web/refs/heads/main/4g_cam_boot_log.txt) 
 
 [SPI Dump](https://github.com/sw3nlab/V380-Web/blob/main/4g.bin)
+
+[Клиент под Windows для просмотра 4G камер V380 с компьютера ](https://drive.google.com/file/d/1OxkICOR_1UwQNb8umTJXPohaOjRI6evo/view?usp=drivesdk)
