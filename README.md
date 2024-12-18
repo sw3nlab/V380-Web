@@ -77,4 +77,14 @@ People complain that the Web does not work and send the software version. I can'
 [Клиент под Windows для просмотра 4G камер V380 с компьютера ](https://drive.google.com/file/d/1OxkICOR_1UwQNb8umTJXPohaOjRI6evo/view?usp=drivesdk)
 >Китайские клиенты под Win настолько коряво написаны, что разных версиях клиентов разные ограничения на количество символов в пароле при авторизации. 
 В приведенной выше версии пароль из 15 символов проходит норм.
-![](screenshots/screen380.jpg)
+![](screenshots/screenV380.png)
+>WINE
+```php
+sudo apt-get update
+sudo apt-get install wine
+#sudo dpkg --add-architecture i386
+#sudo apt-get install wine32:i386
+WINEARCH=win32 WINEPREFIX=~/clean_win32 winecfg
+wine V380.2.0.3.exe
+```
+так же можно попробовать запустить .apk приложение в эмуляторе типа BlueStacks 
