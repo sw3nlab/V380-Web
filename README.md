@@ -86,5 +86,9 @@ sudo apt-get install wine
 #sudo apt-get install wine32:i386
 WINEARCH=win32 WINEPREFIX=~/clean_win32 winecfg
 wine V380.2.0.3.exe
+
+#если возникает ошибка
+#Wine: could not load kernel32.dll, status c0000135
+#rm -rf ~/.wine ~/.wine.old
 ```
 так же можно попробовать запустить .apk приложение в эмуляторе типа BlueStacks 
